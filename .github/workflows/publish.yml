@@ -29,5 +29,6 @@ jobs:
 
       - name: Push
         run: |
+         cd src/out
          ls
-         dotnet nuget push ./src/out/*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_KEYS }} -s https://api.nuget.org/v3/index.json
+         dotnet nuget push ./*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_KEYS }} -s https://api.nuget.org/v3/index.json
