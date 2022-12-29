@@ -20,12 +20,14 @@ jobs:
 
       - name: Setup .NET Core @ Latest
         uses: actions/setup-dotnet@v1
-          
-      - name: Build solution and generate NuGet package
-        run: |  
+
+      - name: Build
+        run: |
           cd src
           dotnet build -c Release
           dotnet pack -c Release -o out
 
-      - name: Push generated package to GitHub registry
-        run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_KEYS }} -s https://api.nuget.org/v3/index.json
+      - name: Push
+        run: |
+         ls
+         dotnet nuget push ./src/out/*.nupkg --skip-duplicate --no-symbols true -k ${{ secrets.NUGET_KEYS }} -s https://api.nuget.org/v3/index.json
