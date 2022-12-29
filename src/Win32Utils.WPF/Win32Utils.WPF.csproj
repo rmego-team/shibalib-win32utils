@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<Version>0.9.0-pre</Version>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>RMEGo.ShibaLib.Win32Utils</Title>
+		<Authors>Akaishi Toshiya</Authors>
+		<Company>RMEGo Studio</Company>
+		<Product>ShibaLib</Product>
+		<PackageProjectUrl>https://github.com/rmego-team/shibalib-win32utils</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/rmego-team/shibalib-win32utils</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Win32Utils\Win32Utils.csproj" />
+	</ItemGroup>
+
+</Project>
