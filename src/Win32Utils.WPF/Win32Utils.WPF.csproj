@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
-		<Version>0.9.2-pre</Version>
+		<Version>0.9.3-pre</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>RMEGo.ShibaLib.Win32Utils</Title>
 		<Authors>Akaishi Toshiya</Authors>
