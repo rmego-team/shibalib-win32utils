@@ -20,7 +20,8 @@ namespace RMEGo.ShibaLib.Win32Utils.Managed
         {
             this.PID = pid;
             this.Handle = Win32ProcessUtils.OpenProcess(PROCESS.QUERY_INFORMATION | PROCESS.WM_READ, false, pid);
-            if (this.Handle == IntPtr.Zero) {
+            if (this.Handle == IntPtr.Zero)
+            {
                 throw new EntryPointNotFoundException($"Could not found a running process with PID: {pid}");
             }
         }
@@ -170,6 +171,20 @@ namespace RMEGo.ShibaLib.Win32Utils.Managed
                 min += (long)memInfo.RegionSize;
             }
             return null;
+        }
+
+        public byte[] ReadExact(long pos, int size)
+        {
+            var buffer = new byte[size];
+            var readed = 0;
+            if (Win32ProcessUtils.ReadProcessMemory(this.Handle, pos, buffer, size, ref readed))
+            {
+                return buffer[0..readed];
+            }
+            else
+            {
+                throw new InvalidOperationException("ReadProcessMemory failed.");
+            }
         }
 
         #region === Debug Interfaces

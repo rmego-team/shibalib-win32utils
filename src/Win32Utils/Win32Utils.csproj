@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>0.9.3-pre</Version>
+		<Version>0.9.4-pre</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>RMEGo.ShibaLib.Win32Utils</Title>
 		<Authors>Akaishi Toshiya</Authors>
