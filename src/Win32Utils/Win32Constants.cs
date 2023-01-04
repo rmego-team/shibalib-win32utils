@@ -26,7 +26,24 @@ public static class Win32Constants
         public const int SYSKEYDOWN = 0x0104;
     }
 
-    public static class VK { 
+    public static class VK
+    {
         public const int F4 = 0x73;
+    }
+
+    public static class PROCESS
+    {
+        public const int QUERY_INFORMATION = 0x0400;
+        public const int WM_READ = 0x0010;
+    }
+
+    public static class MEM
+    {
+        public const int COMMIT = 0x00001000;
+    }
+
+    public static class PAGE
+    {
+        public const int READWRITE = 0x04;
     }
 }

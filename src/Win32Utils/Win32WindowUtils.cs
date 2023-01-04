@@ -14,10 +14,10 @@ public static class Win32WindowUtils
     private const int VK_F4 = 0x73;
 
     [DllImport("user32.dll")]
-    private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+    internal static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
     [DllImport("user32.dll")]
-    private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwLong);
+    internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwLong);
 
     private static void SwitchWindowLongFlag(IntPtr hWnd, int nIndex, int dwLong, bool turnOn)
     {
